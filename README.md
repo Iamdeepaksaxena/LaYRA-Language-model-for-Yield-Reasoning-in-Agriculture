@@ -1,9 +1,5 @@
 # LaYRA-Language-model-for-Yield-Reasoning-in-Agriculture
-
-LaYRA: Language Model for Yield Reasoning in Agriculture - a TinyLlama-based model fine-tuned using domain-adaptive training, instruction tuning, and preference alignment for agricultural applications.
-
 <div align="center">
-
 # 🌾 LaYRA
 ### *Language Model for Yield Reasoning in Agriculture*
 
@@ -46,14 +42,6 @@ The model specializes in agricultural reasoning and question answering by learni
 - 🤗 Hugging Face Transformers Ecosystem
 
 ---
-
-# 🏗 Model Architecture
-
-<div align="center">
-<img src="docs/Architecture.png" width="100%">
-</div>
-
-LaYRA extends TinyLlama with agriculture-specific knowledge through domain adaptation, supervised instruction tuning, and preference optimization, enabling more accurate agricultural reasoning and response generation.
 
 ---
 
@@ -155,12 +143,26 @@ Detailed dataset documentation is available in:
 
 # 📊 Evaluation
 
-LaYRA was evaluated using standard Natural Language Generation metrics.
+# 📊 Evaluation
 
-### Metrics
+LaYRA was evaluated using standard Natural Language Generation (NLG) metrics to measure semantic similarity and response quality across different training stages.
 
-- BLEU Score
-- BERTScore
+## Evaluation Metrics
+
+| Model | BERTScore | ROUGE-1 | ROUGE-2 | ROUGE-L |
+|-------|----------:|---------:|---------:|---------:|
+| TinyLlama-DAPT | 0.4478 | 0.0670 | 0.0121 | 0.0487 |
+| TinyLlama-SFT | 0.7019 | 0.1485 | 0.0519 | 0.1222 |
+| TinyLlama-DPO | **0.8211** | 0.1028 | 0.0185 | 0.0763 |
+
+The results demonstrate substantial improvements in semantic understanding after Instruction Fine-Tuning (SFT) and further enhancement through Direct Preference Optimization (DPO). While SFT achieves the highest ROUGE scores, DPO produces the best semantic similarity, reflected by the highest BERTScore.
+
+Evaluation results and visualizations are available in:
+
+```text
+metrics/
+visualizations/
+```
 
 Evaluation results and visualizations are available in:
 
