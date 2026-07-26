@@ -1,18 +1,19 @@
 # LaYRA-Language-model-for-Yield-Reasoning-in-Agriculture
 <div align="center">
-🌾 LaYRA
-**Language Model for Yield Reasoning in Agriculture**
+🌾 LaYRA: Language Model for Yield Reasoning in Agriculture
 
 > **A TinyLlama-based Agriculture Large Language Model specialized for agricultural reasoning and question answering.**
 
 <img src="docs/Architecture.png" width="95%">
-
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red?style=for-the-badge&logo=pytorch)
 ![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow?style=for-the-badge)
 ![PEFT](https://img.shields.io/badge/PEFT-LoRA-success?style=for-the-badge)
 ![TRL](https://img.shields.io/badge/TRL-DPO-orange?style=for-the-badge)
-![Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge)
+![TinyLlama](https://img.shields.io/badge/Base_Model-TinyLlama--1.1B-green?style=for-the-badge)
+![CUDA](https://img.shields.io/badge/CUDA-12.8-76B900?style=for-the-badge&logo=nvidia)
+![Kaggle](https://img.shields.io/badge/Platform-Kaggle-20BEFF?style=for-the-badge&logo=kaggle)
+![License](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge)
 
 </div>
 
@@ -47,14 +48,15 @@ The model specializes in agricultural reasoning and question answering by learni
 <div align="center">
 <img src="docs/LaYRA_Training_Pipeline.png" width="100%">
 </div>
-
+---
+---
 | Stage | Dataset | Samples |
 |--------|---------|---------:|
 | 🌾 Domain-Adaptive Pretraining (DAPT) | AnmolNimmala0/agri-slm-corpus | 10,000 |
 | 💬 Instruction Fine-Tuning (SFT) | KisanVaani/agriculture-qa-english-only | 15,000 |
 | ⭐ Direct Preference Optimization (DPO) | Generated Preference Dataset | 908 Preference Pairs |
-
 ---
+
 
 # 🔄 Model Workflow
 <div align="center">
@@ -149,9 +151,9 @@ LaYRA was trained using a three-stage pipeline consisting of Domain-Adaptive Pre
 
 | Training Stage | Dataset | Epochs | Training Loss | Training Time |
 |----------------|---------|-------:|--------------:|--------------:|
-| Domain-Adaptive Pretraining (DAPT) | Agri-SLM Corpus | 5 | 1.7232 | 8h 16m 28s |
-| Instruction Fine-Tuning (SFT) | Agriculture QA | 2 | **0.1024** | 2h 12m 04s |
-| Direct Preference Optimization (DPO) | Preference Dataset | 2 | 0.4783 | 27m 10s |
+| Domain-Adaptive Pretraining (DAPT) | `AnmolNimmala0/agri-slm-corpus` (10,000 samples) | 5 | 1.7232 | 8h 16m 28s |
+| Instruction Fine-Tuning (SFT) | `KisanVaani/agriculture-qa-english-only` (15,000 samples) | 2 | **0.1024** | 2h 12m 04s |
+| Direct Preference Optimization (DPO) | Generated Preference Dataset (908 pairs) derived from `KisanVaani/agriculture-qa-english-only` | 2 | 0.4783 | 27m 10s |
 
 > **Training Highlight:** The DPO stage achieved **91.67% reward accuracy**, demonstrating successful preference alignment between preferred and rejected responses.
 > ---
