@@ -1,9 +1,5 @@
 # LaYRA-Language-model-for-Yield-Reasoning-in-Agriculture
-<div align="center">
-🌾 LaYRA: Language Model for Yield Reasoning in Agriculture
-
-> **A TinyLlama-based Agriculture Large Language Model specialized for agricultural reasoning and question answering.**
-
+<div>
 <img src="docs/Architecture.png" width="95%">
 
 ![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
@@ -15,6 +11,11 @@
 ![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20Tesla%20T4-76B900?style=for-the-badge&logo=nvidia)
 ![Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge&logo=apache)
 
+</div>
+<div align="center">
+🌾 LaYRA: Language Model for Yield Reasoning in Agriculture
+
+> **A TinyLlama-based Agriculture Large Language Model specialized for agricultural reasoning and question answering.**
 </div>
 
 ---
