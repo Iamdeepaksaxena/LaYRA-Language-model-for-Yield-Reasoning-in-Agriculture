@@ -1,7 +1,7 @@
 # LaYRA-Language-model-for-Yield-Reasoning-in-Agriculture
 <div align="center">
-# 🌾 LaYRA
-# *Language Model for Yield Reasoning in Agriculture*
+🌾 LaYRA
+**Language Model for Yield Reasoning in Agriculture**
 
 > **A TinyLlama-based Agriculture Large Language Model specialized for agricultural reasoning and question answering.**
 
@@ -36,7 +36,7 @@ The model specializes in agricultural reasoning and question answering by learni
 - 🌾 Crop & Soil Knowledge
 - 🐛 Pest & Disease Understanding
 - 💧 Irrigation & Fertilizer Guidance
-- 📊 BLEU & BERTScore Evaluation
+- 📊 ROUGE & BERTScore Evaluation
 - 🚀 Parameter-Efficient Fine-Tuning (LoRA)
 - 🤗 Hugging Face Transformers Ecosystem
 ---
@@ -131,19 +131,29 @@ Detailed dataset documentation is available in:
 | Kaggle | Jupyter Notebook |
 
 ---
+# 💻 Training Environment
+LaYRA was trained using Kaggle Notebooks with the following computational resources.
+
+| Resource | Specification |
+|----------|---------------|
+| Platform | Kaggle Notebooks |
+| GPU | Tesla T4 2X |
+| GPU Memory | 15 GB × 2 (30 GB Total VRAM) |
+| CPU | 4 vCPUs |
+| CPU Memory| 30 GB RAM |
+| Disk Memory| 57.6 GB |
 ---
+
 # 📈 Training Summary
+LaYRA was trained using a three-stage pipeline consisting of Domain-Adaptive Pretraining (DAPT), Instruction Fine-Tuning (SFT), and Direct Preference Optimization (DPO).
 
-LaYRA was trained through a three-stage fine-tuning pipeline consisting of Domain-Adaptive Pretraining (DAPT), Supervised Fine-Tuning (SFT), and Direct Preference Optimization (DPO).
+| Training Stage | Dataset | Epochs | Training Loss | Training Time |
+|----------------|---------|-------:|--------------:|--------------:|
+| Domain-Adaptive Pretraining (DAPT) | Agri-SLM Corpus | 5 | 1.7232 | 8h 16m 28s |
+| Instruction Fine-Tuning (SFT) | Agriculture QA | 2 | **0.1024** | 2h 12m 04s |
+| Direct Preference Optimization (DPO) | Preference Dataset | 2 | 0.4783 | 27m 10s |
 
-| Stage | Epochs | Training Loss | Remarks |
-|------|------:|--------------:|---------|
-| Domain-Adaptive Pretraining (DAPT) | 5 | 1.7232 | Learned agriculture-specific language representations. |
-| Instruction Fine-Tuning (SFT) | 2 | **0.1024** | Learned instruction-following and agricultural question answering. |
-| Direct Preference Optimization (DPO) | 2 | 0.4783 | Improved response quality through preference alignment. |
----
----
-> **DPO Training Highlight:** During preference optimization, LaYRA achieved a **91.67% reward accuracy**, indicating successful alignment with preferred responses in the generated preference dataset.
+> **Training Highlight:** The DPO stage achieved **91.67% reward accuracy**, demonstrating successful preference alignment between preferred and rejected responses.
 > ---
 
 
@@ -163,7 +173,8 @@ The results demonstrate substantial improvements in semantic understanding after
 
 <div align="center">
 <img src="visualizations/ROUGE and BERT_F1 Score.png" width="90%">
-<br><br>
+<br><hr><br>
+  
 <img src="visualizations/ROUGE_Score_Comparison.png" width="90%">
 </div>
 
