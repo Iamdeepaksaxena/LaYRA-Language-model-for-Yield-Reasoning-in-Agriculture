@@ -13,6 +13,7 @@
 </div>
 <div align="center">
 🌾 LaYRA: Language Model for Yield Reasoning in Agriculture
+  
 > **A TinyLlama-based Agriculture Large Language Model specialized for agricultural reasoning and question answering.**
 <img src="docs/Architecture.png" width="95%">
 </div>
@@ -47,9 +48,9 @@ The model specializes in agricultural reasoning and question answering by learni
 # ⚙ Training Pipeline
 <div align="center">
 <img src="docs/LaYRA_Training_Pipeline.png" width="100%">
+  <br>
 </div>
----
----
+
 | Stage | Dataset | Samples |
 |--------|---------|---------:|
 | 🌾 Domain-Adaptive Pretraining (DAPT) | AnmolNimmala0/agri-slm-corpus | 10,000 |
