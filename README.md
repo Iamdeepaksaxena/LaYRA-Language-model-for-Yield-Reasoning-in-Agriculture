@@ -6,16 +6,14 @@
 
 <img src="docs/Architecture.png" width="95%">
 
-![Python](https://img.shields.io/badge/Python-3.10+-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![Transformers](https://img.shields.io/badge/Hugging%20Face-Transformers-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black)
-![PEFT](https://img.shields.io/badge/PEFT-LoRA-009688?style=for-the-badge)
-![TRL](https://img.shields.io/badge/TRL-DPO-FF9800?style=for-the-badge)
-![TinyLlama](https://img.shields.io/badge/Base%20Model-TinyLlama--1.1B-4CAF50?style=for-the-badge)
-![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20Tesla%20T4-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![CUDA](https://img.shields.io/badge/CUDA-12.8-76B900?style=for-the-badge&logo=nvidia&logoColor=white)
-![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white)
-![Apache](https://img.shields.io/badge/License-Apache%202.0-D22128?style=for-the-badge&logo=apache&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3.10+-blue?style=for-the-badge&logo=python)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.x-red?style=for-the-badge&logo=pytorch)
+![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow?style=for-the-badge)
+![PEFT](https://img.shields.io/badge/PEFT-LoRA-success?style=for-the-badge)
+![TRL](https://img.shields.io/badge/TRL-DPO-orange?style=for-the-badge)
+![Kaggle](https://img.shields.io/badge/Kaggle-Notebook-20BEFF?style=for-the-badge&logo=kaggle)
+![NVIDIA](https://img.shields.io/badge/GPU-NVIDIA%20Tesla%20T4-76B900?style=for-the-badge&logo=nvidia)
+![Apache 2.0](https://img.shields.io/badge/License-Apache--2.0-blue?style=for-the-badge&logo=apache)
 
 </div>
 
