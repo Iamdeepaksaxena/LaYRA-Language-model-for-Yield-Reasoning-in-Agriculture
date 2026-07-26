@@ -131,6 +131,22 @@ Detailed dataset documentation is available in:
 | Kaggle | Jupyter Notebook |
 
 ---
+---
+# 📈 Training Summary
+
+LaYRA was trained through a three-stage fine-tuning pipeline consisting of Domain-Adaptive Pretraining (DAPT), Supervised Fine-Tuning (SFT), and Direct Preference Optimization (DPO).
+
+| Stage | Epochs | Training Loss | Remarks |
+|------|------:|--------------:|---------|
+| Domain-Adaptive Pretraining (DAPT) | 5 | 1.7232 | Learned agriculture-specific language representations. |
+| Instruction Fine-Tuning (SFT) | 2 | **0.1024** | Learned instruction-following and agricultural question answering. |
+| Direct Preference Optimization (DPO) | 2 | 0.4783 | Improved response quality through preference alignment. |
+---
+---
+> **DPO Training Highlight:** During preference optimization, LaYRA achieved a **91.67% reward accuracy**, indicating successful alignment with preferred responses in the generated preference dataset.
+> ---
+
+
 # 📊 Evaluation
 LaYRA was evaluated using standard Natural Language Generation (NLG) metrics to assess semantic similarity and response quality across different stages of fine-tuning.
 ## Evaluation Metrics
@@ -144,8 +160,9 @@ LaYRA was evaluated using standard Natural Language Generation (NLG) metrics to 
 The results demonstrate substantial improvements in semantic understanding after Instruction Fine-Tuning (SFT) and further enhancement through Direct Preference Optimization (DPO). While SFT achieves the highest ROUGE scores, DPO produces the best semantic similarity, reflected by the highest BERTScore.
 
 ## 📈 Evaluation Visualizations
+
 <div align="center">
-<img src="visualizations/ROUGE_and_BERT_F1_Score.png" width="90%">
+<img src="visualizations/ROUGE and BERT_F1 Score.png" width="90%">
 <br><br>
 <img src="visualizations/ROUGE_Score_Comparison.png" width="90%">
 </div>
